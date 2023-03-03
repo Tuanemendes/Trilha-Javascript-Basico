@@ -18,14 +18,14 @@ const {gets, print} = require('./funcoes-aux-ex02');
 const quantidadeNumeros = gets();
 
 let maiorNumero = 0;
-let menorNumero = 200; 
+let menorNumero = null; 
 
 for (let i = 0; i < quantidadeNumeros; i++) {
     const numero = gets();
     if(numero > maiorNumero){
         maiorNumero = numero
     }
-    if(numero < menorNumero && numero != 0){
+    if(menorNumero === null || numero < menorNumero ){
         menorNumero = numero
     }  
 }
